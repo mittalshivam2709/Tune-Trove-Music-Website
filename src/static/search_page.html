@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Example</title>
+    <link rel="stylesheet" href="new_style.css">
+</head>
+
+<body>
+    <div class="background">
+        <nav>
+            <div class="image-container">
+                <img align="left" src="musicsymbol.jpeg">
+            </div>
+            <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
+            <a href="about_page.html">About</a>
+            <a href="/playlist">Playlist</a>
+            <a href="new_spotlight.html">Spotlight</a>
+            <a href="5_artitsts.html">Artists</a>
+            <a href="search_page.html" class="active">Search</a>
+            <a href="webpage.html">Home</a>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <center>
+            <p style="color: yellow; font-size: 150px;margin-bottom: 0px; margin-top: 0%;">SEARCH PAGE</p>
+            <input style="font-size: 50px; height: 60px; color: blue;" id="search-input" type="text"
+                placeholder="Search for song/artist/album">
+            <button style="width: 200px; height: 60px; font-size: 50px; color: white; background-color: green;"
+                id="search-btn">Search</button>
+            <br>
+            <br><br>
+            <br>
+            <label style="font-size: 40px;" for="duration-input">Maximum duration (in minutes):</label>
+            <input style="width: 100px; height: 30px;" type="number" id="duration-input" min="1">
+            <br>
+            <label style="font-size: 40px;" for="explicit-input">Filter explicit:</label>
+            <select style="width: 100px; height: 30px;" id="explicit-input">
+                <option value="all">All</option>
+                <option value="explicit">Explicit</option>
+                <option value="not-explicit">Not explicit</option>
+            </select>
+            <br>
+            <button style="background-color: green;width: 200px; height: 60px; font-size: 20px;"
+                id="apply-filters-btn">Apply Filters</button>
+            <button style=" background-color: green;width: 200px; height: 60px;font-size: 20px;"
+                id="remove-filters-btn">Remove Filters</button>
+            <div id="search-results"></div>
+            <div id="exp"></div>
+
+        </center>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <ul>
+                        <h3>FIND US ON</h3>
+                        <li><a href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D">INSTAGRAM</a>
+                        </li>
+                        <li><a href="https://www.facebook.com/aniket.bansal.5011">FACEBOOK</a></li>
+                        <li><a
+                                href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">TWITTER</a>
+                        </li>
+                    </ul>
+                    <p></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="webpage.html">Home</a></li>
+                        <li><a href="5_artitsts.html">Artists</a></li>
+                        <li><a href="about_page.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@tunetrover.com</p>
+                    <p>Phone: 2434294243</p>
+                    <p>Address: Bakul Nivas , IIIT HYD</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 TuneTroverWebsite. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

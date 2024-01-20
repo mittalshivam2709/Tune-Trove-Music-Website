@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container img {
+      width: 100px;
+      height: 100px;
+    }
+    
+     /* .h1:first-child {
+      margin-top: 0px;
+      margin-bottom: 0px;
+     } */
+    
+        img {
+       width: 500px;
+       height: 500px;
+       border-radius: 50%;
+       border: 10px solid purple;
+      
+       transition: transform 0.25s ease-in-out;
+     }
+    
+     img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 8px 32px 0 black;
+     }
+        nav {
+                 background-color: black;
+                 overflow: hidden;
+                 padding: 10px;
+                 margin-bottom: 0%;
+                 align-items: center;
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width: 98%;
+                 z-index: 1;
+               height: 100px;
+               color: #fff;
+               border-bottom: 5px solid white;
+             }
+     
+           
+             nav a {
+                 color: white;
+     
+                 display: flex;
+                 justify-content: flex-end;
+                 text-align: right;
+                 padding: 14px 16px;
+                 text-decoration: none;
+                 font-size: 25px;
+                 font-weight: bold;
+                 
+                 float: right;
+                 flex-basis: 10%;
+     
+             }
+     
+             nav a:hover {
+                 background-color: #ddd;
+                 color: black;
+             }
+     
+             /* Add an active class to the current link */
+             .active {
+                 background-color: #4CAF50;
+                 color: white;
+             }
+     
+             .nav-text {
+                 font-size: 60px;
+                 display: inline-block;
+                 padding: 10px;
+             }
+     
+             body {
+                 padding-top: 60px;
+                 background-color: black;
+                 color: white;
+     
+             }
+     
+       
+     
+     
+         .row {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin: 0 -20px;
+     }
+     
+     .column {
+       display: flex;
+       max-width: 33%;
+       padding: 0 20px;
+       text-align: center;
+       transition: width 2s ease-in-out;
+     }
+     /* .column2 {
+      position: absolute;
+      top: 450px;
+      left: 500px;
+    } */
+    /* Define the background image */
+    .background {
+      background-image: url(bg.jpeg);
+      background-size: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Define the animation properties */
+    .background {
+      animation-name: move-background;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    
+    /* Define the keyframes */
+    @keyframes move-background {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+    /* Style the footer */
+    footer {
+      background-color: #212121;
+      color: white;
+      padding: 40px 0;
+      border-top: 5px solid white;
+    }
+    
+    /* Style the footer container */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Style the footer columns */
+    .footer-column {
+      width: 30%;
+    }
+    
+    .footer-column h3 {
+      margin-bottom: 20px;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* Style the footer bottom */
+    .footer-bottom {
+      background-color: #111111;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer-bottom p {
+      margin: 0;
+    }
+    
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    p {
+            font-size: larger;
+        }
+
+        td {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        th {
+            padding: 100px;
+            text-align: center;
+            font-size: 40px;
+        }
+     
+     
+     /* footer {
+           background-color: black;
+           color: #fff;
+           padding: 10px;
+           height: 150px;
+         } */
+         
+    .row1 {
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin: 0 -20px;
+      /* background-color: red;
+       */
+      /* animation: fadeIn 5s ease-in-out infinite; */
+    }
+    column:hover {
+      width: 600px;
+    }
+    
+    /* Animation for second row */
+    .row2 {
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin: 0 -20px;
+      /* position: absolute;
+      top: 0px;
+      left: 200px; */
+      /* background: linear-gradient(to right, #3366cc, #003366); */
+      /* animation: fadeIn 5s ease-in-out infinite; */
+    }
+    
+    /* Animation for third row */
+    .row3 {
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin: 0 -20px;
+      /* background: linear-gradient(to right, #ff99cc, #ff0099); */
+      /* animation: fadeIn 5s ease-in-out infinite; */
+    }
+    
+    
+    /* Animation keyframes */
+    /* @keyframes slideIn {
+      from {background-position: 0% 50%;}
+      to {background-position: 100% 50%;}
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    
+    @keyframes pulse {
+      0% {background-color: #ff99cc;}
+      50% {background-color: #ff0099;}
+      100% {background-color: #ff99cc;} */
+    /* } */
+    
+     
+       </style>
+     
+
+
+</head>
+
+<body>
+    <div class="background">
+      <nav>
+        <div class="image-container">
+            <img align="left" src="musicsymbol.jpeg">
+        </div>
+        <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
+        <a href="about_page.html">About</a>
+        <a href="5_artitsts.html">Artists</a>
+        <a href="webpage.html">Home</a>
+    </nav>
+
+
+
+    <img align="left" width="400px" src="soothyjpg" alt="arijit">
+    <center>
+        <h1 style="font-size: 170px;">Soothy </h1>
+    </center>
+
+    <table>
+        <tr>
+            <th>Serial no.</th>
+            <th>SONGS</th>
+            <th>    DURATION    </th>
+            <th>DATE ADDED</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Kabhi jo badal barse </td>
+            <td>4:09</td>
+            <td>6th April</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Raabta</td>
+            <td>4:49</td>
+            <td>6th April</td>
+
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td> Manwa Laage </td>
+            <td>4:32</td>
+            <td>6th April</td>
+
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td> Ghoomar</td>
+            <td>4:42</td>
+            <td>6th April</td>
+
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Hangover</td>
+            <td>6:15</td>
+            <td>6th April</td>
+
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td> Aashiq Surrender hua</td>
+            <td>4:10</td>
+            <td>6th April</td>
+
+        </tr>
+    </table>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <ul>
+                    <h3>FIND US ON</h3>
+                    <li><a href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D">INSTAGRAM</a></li>
+                    <li><a href="https://www.facebook.com/aniket.bansal.5011">FACEBOOK</a></li>
+                    <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">TWITTER</a></li>
+                </ul>
+                <p></p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="webpage.html">Home</a></li>
+                    <li><a href="5_artitsts.html">Artists</a></li>
+                    <li><a href="about_page.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@tunetrover.com</p>
+                <p>Phone: 2434294243</p>
+                <p>Address: Bakul Nivas , IIIT HYD</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 TuneTroverWebsite. All Rights Reserved.</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

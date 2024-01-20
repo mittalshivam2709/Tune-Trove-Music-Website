@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .image-container img {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 10px solid purple;
+
+    transition: transform 0.25s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 32px 0 black;
+}
+
+nav {
+    background-color: black;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 0%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    z-index: 1;
+    height: 100px;
+    color: #fff;
+    border-bottom: 5px solid white;
+}
+
+
+nav a {
+    color: white;
+
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+    float: right;
+    flex-basis: 10%;
+
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav-text {
+    font-size: 60px;
+    display: inline-block;
+    padding: 10px;
+}
+
+body {
+    padding-top: 60px;
+    background-color: black;
+    color: white;
+    font-family: Tahoma, sans-serif;
+
+}
+
+
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.column {
+    display: flex;
+    max-width: 33%;
+    padding: 0 20px;
+    text-align: center;
+    transition: width 2s ease-in-out;
+}
+.background {
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    animation-name: move-background;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+footer {
+    background-color: #212121;
+    color: white;
+    padding: 40px 0;
+    border-top: 5px solid white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: #111111;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+.row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+column:hover {
+    width: 600px;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.row3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+a {
+    color: white;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="background">
+<nav>
+    <div class="image-container">
+        <img align="left" src="musicsymbol.jpeg">
+    </div>
+    <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
+    <a href="about_page.html">About</a>
+    <a href="/playlist">Playlist</a>
+    <a href="new_spotlight.html">Spotlight</a>
+    <a href="5_artitsts.html">Artists</a>
+    <a href="search_page.html">Search</a>
+    <a href="webpage.html">Home</a>
+</nav>
+<center>
+  <h1 style="font-size: 80px;">ARMAAN MALIK'S ALBUMS</h1>
+</center>
+  <div class="row">
+    <div class="column">
+      <a href ="barsaat.html">
+      <img src="barsaat.jpeg" alt="Artist 1">
+      <h2>BARSAAT</h2> 
+      <h2>No of songs:6</h2>
+        <h2>Year of Release:2019</h2>
+      </a>
+    </div>
+    
+    <div class="column">
+      <a href ="rising_star.html">
+      <img src="Rising-Star-Armaan-Malik-Hindi-2016-500x500.jpg" alt="Artist 2">
+      <h2>THE RISING STAR</h2>
+      <h2>No of songs:6</h2>
+        <h2>Year of Release:2018</h2>
+      </a>
+    </div>
+    <div class="column">
+      <a href ="the_utimate.html">
+      <img src="Best-Of-Armaan-Malik-The-Ultimate-Sandalwood-Collection-Kannada-2020-20200714134024-500x500.jpg" alt="Artist 3">
+      <h2>THE ULTIMATE SANDALWOOD COLLECTION</h2>
+      <h2>No of songs:6</h2>
+        <h2>Year of Release:2017</h2>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <a href ="armaan.html">
+      <img src="armaan.jpg" alt="Artist 4">
+      <h2>ARMAAN</h2>
+      <h2>No of songs:6</h2>
+        <h2>Year of Release:2020</h2>
+      </a>
+    </div>
+    <div class="column">
+      <a href ="the_voice.html">
+      <img src="the voice of am.jpeg" alt="Artist 5">
+      <h2>THE VOICE OF ARMAAN MALIK</h2>
+      <h2>No of songs:6</h2>
+        <h2>Year of Release:2021</h2>
+      </a>
+    </div>
+  </div>
+
+  
+
+  
+   
+  
+  
+  
+</body>
+</html>
