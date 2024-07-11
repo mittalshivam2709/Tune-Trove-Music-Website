@@ -1,5 +1,5 @@
 # project-geeks
-project-geeks created by GitHub Classroom
+
 INSTRUCTIONS TO OPERATE
 
 HOW TO VIEW THE WEBSITE
