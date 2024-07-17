@@ -5,7 +5,6 @@ app = Flask(__name__)
 CORS(app, orgins="*")
 
 
-
 conn = sqlite3.connect('playlist.db')
 c = conn.cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS songs
@@ -19,8 +18,10 @@ conn.close()
 
 
 @app.route('/add_song_to_playlist', methods=['POST'])
+
 def add_song_to_playlist():
-    data = request.json
+    # data is received in JSON format and stored in the variable data
+    data = request.json 
 
     name = data['name']
     date = data['date']
@@ -61,7 +62,7 @@ def index():
 
 @app.route('/remove_song/<int:sr_num>', methods=['POST'])
 def remove_song(sr_num):
-    try:
+    try:    
         conn = sqlite3.connect('playlist.db')
         c = conn.cursor()
         c.execute('DELETE FROM songs WHERE sr_num = ?', (sr_num,))

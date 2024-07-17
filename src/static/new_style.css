@@ -8,25 +8,26 @@
     outline: none;
     cursor: pointer;
 }
-
-.pause-btn {
-    background-image: url('https://www.nicepng.com/png/detail/458-4581943_pause-button-comments-pause-button-icon-png.png');
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    filter: invert(1);
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
 }
 
-.progress-bar {
-    height: 2px;
-    background-color: yellow;
-    margin-top: 10px;
-    width: 500px;
-}
+         .row {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin: 0 -20px;
+     }
+     
+     .column {
+       display: flex;
+       max-width: 33%;
+       padding: 0 20px;
+       text-align: center;
+       transition: width 2s ease-in-out;
+     }
 .current-time {
     color: white;
 }

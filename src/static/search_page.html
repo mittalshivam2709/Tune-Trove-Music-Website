@@ -12,6 +12,7 @@
             <div class="image-container">
                 <img align="left" src="musicsymbol.jpeg">
             </div>
+            <p style="color: red;"></p>
             <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
             <a href="about_page.html">About</a>
             <a href="/playlist">Playlist</a>
@@ -24,28 +25,42 @@
         <br>
         <br>
         <center>
-            <p style="color: yellow; font-size: 150px;margin-bottom: 0px; margin-top: 0%;">SEARCH PAGE</p>
-            <input style="font-size: 50px; height: 60px; color: blue;" id="search-input" type="text"
-                placeholder="Search for song/artist/album">
-            <button style="width: 200px; height: 60px; font-size: 50px; color: white; background-color: green;"
-                id="search-btn">Search</button>
+            <br><br>
+            
+            <input style=" font-size: 50px; height: 60px; color: black;background-color: grey; " id="search-input" type="text"
+            placeholder="Search for song/artist/album">
+
+            <button style="width: 200px; height: 60px; font-size: 50px; color: white; background-color: black;" id="search-btn">
+            Search</button>
+            
             <br>
             <br><br>
             <br>
-            <label style="font-size: 40px;" for="duration-input">Maximum duration (in minutes):</label>
-            <input style="width: 100px; height: 30px;" type="number" id="duration-input" min="1">
+            
+            <label style="font-size: 40px;" for="duration-input">
+            Maximum duration (in minutes):</label>
+            <input style="font-size: 30px; width: 100px; height: 30px;" type="number" id="duration-input" min="1">
+            
             <br>
-            <label style="font-size: 40px;" for="explicit-input">Filter explicit:</label>
-            <select style="width: 100px; height: 30px;" id="explicit-input">
+            <br><br>
+
+            <label style="font-size: 40px;" for="explicit-input">
+            Filter explicit:</label>
+
+            <select style="font-size: 20px; width: 100px; height: 50px;" id="explicit-input">
                 <option value="all">All</option>
                 <option value="explicit">Explicit</option>
                 <option value="not-explicit">Not explicit</option>
             </select>
-            <br>
-            <button style="background-color: green;width: 200px; height: 60px; font-size: 20px;"
-                id="apply-filters-btn">Apply Filters</button>
-            <button style=" background-color: green;width: 200px; height: 60px;font-size: 20px;"
-                id="remove-filters-btn">Remove Filters</button>
+            
+            <br><br><br>
+            
+            <button style="color: white; background-color: black;width: 200px; height: 60px; font-size: 20px;"id="apply-filters-btn">
+            Apply Filters</button>
+            
+            <button style="color: white; background-color: black;width: 200px; height: 60px;font-size: 20px;"id="remove-filters-btn">
+            Remove Filters</button>
+            
             <div id="search-results"></div>
             <div id="exp"></div>
 

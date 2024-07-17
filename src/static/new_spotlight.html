@@ -25,7 +25,7 @@
       /* set the width of the image */
       height: auto;
       /* maintain the aspect ratio */
-      animation: zoomInOut 3s ease-in-out;
+      animation: zoomInOut 2s ease-in-out;
     }
 
     @keyframes zoomInOut {
@@ -218,8 +218,9 @@
 
     body {
       font-family: Arial, sans-serif;
-      color: yellow;
+      color: white;
       font-size: 30px;
+      margin-right: 10px;
       background-color: #111111;
     }
 
@@ -279,8 +280,6 @@
     </div>
   </div>
   <div>
-
-
     <p style="text-align: center; align-self: center;">Rate this artist:</p>
     <form style="text-align:center ;" id="rating-form">
       <input type="radio" id="star5" name="rating" value="5">
@@ -294,14 +293,19 @@
       <input type="radio" id="star1" name="rating" value="1">
       <label for="star1">1 star</label>
       <br>
+      
       <p for="review">Write a review:</p>
-      <textarea style="width: 500px;height: 200px;" id="review" name="review"></textarea>
+
+      <textarea style="font-size: 30px; width: 500px;height: 200px;" id="review" name="review"></textarea>
+      
       <br>
+      
       <p for="user-name">Your name:</p>
-      <input style="height: 30px;width:500px" type="text" id="user-name" name="user-name">
+      <input style="font-size: 30px; height: 30px;width:500px" type="text" id="user-name" name="user-name">
+      
       <br>
       <br><br>
-      <input type="button" value="Submit" onclick="addReview()">
+      <input style="font-size: 30px; width: auto; height: 50px;" type="button" value="Submit" onclick="addReview()">
     </form>
   </div>
   <div>
@@ -311,7 +315,7 @@
           <th>Rating</th>
           <th>Review</th>
           <th>User</th>
-        </tr>
+        </tr> 
       </thead>
       <tbody id="reviews-table-body">
       </tbody>
@@ -370,6 +374,7 @@
     }, 1000);
     // Reviews
     function addReview() {
+      // .value gives the number of stars and queryseletor selects from all the inputs with name rating and is checked(radio)
       var rating = document.querySelector('input[name="rating"]:checked').value;
       var review = document.getElementById("review").value;
       var userName = document.getElementById("user-name").value;
@@ -383,21 +388,24 @@
 
         var reviewsTableBody = document.getElementById("reviews-table-body");
         var row = reviewsTableBody.insertRow(-1);
-        var ratingCell = row.insertCell(0);
-        var reviewCell = row.insertCell(1);
-        var userCell = row.insertCell(2);
-        ratingCell.innerHTML = rating;
-        reviewCell.innerHTML = review;
-        userCell.innerHTML = userName;
+        
+        // take a new row and insert into columns
+        row.insertCell(0).innerHTML = rating;
+        row.insertCell(1).innerHTML = review;
+        row.insertCell(2).innerHTML = userName;
+        
+        // reset the form 
 
         document.getElementById("rating-form").reset();
-      } else {
+
+      } 
+      else {
         alert("Please fill in all fields.");
       }
     }
 
     // Countdown timer
-    var countdownDate = new Date("June 30, 2023 00:00:00").getTime();
+    var countdownDate = new Date("August 30, 2024 00:00:00").getTime();
     var countdownTimer = setInterval(function () {
       var now = new Date().getTime();
       var distance = countdownDate - now;
@@ -412,6 +420,7 @@
         document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
       }
     }, 1000);
+
     function typeEffect(element, speed) {
       const text = element.textContent;
       element.textContent = "";
@@ -426,7 +435,7 @@
       }, speed);
     }
     const typingText = document.getElementById("typing-text");
-    typeEffect(typingText, 1000); // type at 50 milliseconds per character
+    typeEffect(typingText, 250); // type at 50 milliseconds per character
 
   </script>
 </body>
