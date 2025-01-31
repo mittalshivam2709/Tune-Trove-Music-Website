@@ -5,7 +5,7 @@
 ### HOW TO VIEW THE WEBSITE
 
 In order to view the website please run the following commmand
-```python3 app.py`` after navigating to the src folder and follow the link that is being displayed on the terminal. 
+```python3 app.py``` after navigating to the src folder and follow the link that is being displayed on the terminal. 
 
 ### STRUCTURE OF FILES
 
