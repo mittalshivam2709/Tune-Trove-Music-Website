@@ -1,443 +1,464 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Artist Spotlight</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* padding: 50px; */
-    }
-
-    .artist-info {
-      text-align: center;
-      padding: 100px;
-
-    }
-
-    .artist-info img {
-      width: 500px;
-      /* set the width of the image */
-      height: auto;
-      /* maintain the aspect ratio */
-      animation: zoomInOut 2s ease-in-out;
-    }
-
-    @keyframes zoomInOut {
-      0% {
-        transform: scale(0.25);
-        /* start at normal size */
+  <head>
+    <title>Artist Spotlight</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 50px; */
       }
 
-      50% {
-        transform: scale(2.5);
-        /* zoom in by 150% */
+      .artist-info {
+        text-align: center;
+        padding: 100px;
       }
 
-      100% {
-        transform: scale(1);
-        /* return to normal size */
+      .artist-info img {
+        width: 500px;
+        /* set the width of the image */
+        height: auto;
+        /* maintain the aspect ratio */
+        animation: zoomInOut 2s ease-in-out;
       }
-    }
 
-    .image-container img {
-      width: 100px;
-      height: 100px;
-    }
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(0.25);
+          /* start at normal size */
+        }
 
-    nav {
-      background-color: black;
-      overflow: hidden;
-      padding: 10px;
-      margin-bottom: 0%;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      height: 100px;
-      color: #fff;
-      border-bottom: 5px solid white;
-    }
+        50% {
+          transform: scale(2.5);
+          /* zoom in by 150% */
+        }
 
+        100% {
+          transform: scale(1);
+          /* return to normal size */
+        }
+      }
 
-    nav a {
-      color: white;
+      .image-container img {
+        width: 100px;
+        height: 100px;
+      }
 
-      display: flex;
-      justify-content: flex-end;
-      text-align: right;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      font-weight: bold;
+      nav {
+        background-color: black;
+        overflow: hidden;
+        padding: 10px;
+        margin-bottom: 0%;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100px;
+        color: #fff;
+        border-bottom: 5px solid white;
+      }
 
-      float: right;
-      flex-basis: 10%;
+      nav a {
+        color: white;
 
-    }
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
 
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
+        float: right;
+        flex-basis: 10%;
+      }
 
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-    .nav-text {
-      font-size: 60px;
-      display: inline-block;
-      padding: 10px;
-    }
+      .active {
+        background-color: #4caf50;
+        color: white;
+      }
 
-    nav {
-      background-color: black;
-      overflow: hidden;
-      padding: 10px;
-      margin-bottom: 0%;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      height: 100px;
-      color: #fff;
-      border-bottom: 5px solid white;
-    }
+      .nav-text {
+        font-size: 60px;
+        display: inline-block;
+        padding: 10px;
+      }
 
+      nav {
+        background-color: black;
+        overflow: hidden;
+        padding: 10px;
+        margin-bottom: 0%;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100px;
+        color: #fff;
+        border-bottom: 5px solid white;
+      }
 
-    nav a {
-      color: white;
+      nav a {
+        color: white;
 
-      display: flex;
-      justify-content: flex-end;
-      text-align: right;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
 
-      float: right;
-      flex-basis: 10%;
+        float: right;
+        flex-basis: 10%;
+      }
 
-    }
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
+      .active {
+        background-color: #4caf50;
+        color: white;
+      }
 
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
+      .nav-text {
+        font-size: 60px;
+        display: inline-block;
+        padding: 10px;
+      }
 
-    .nav-text {
-      font-size: 60px;
-      display: inline-block;
-      padding: 10px;
-    }
+      footer {
+        background-color: #212121;
+        color: white;
+        padding: 40px 0;
+        border-top: 5px solid white;
+      }
 
-    footer {
-      background-color: #212121;
-      color: white;
-      padding: 40px 0;
-      border-top: 5px solid white;
-    }
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      .footer-column {
+        width: 30%;
+      }
 
-    .footer-column {
-      width: 30%;
-    }
+      .footer-column h3 {
+        margin-bottom: 20px;
+      }
 
-    .footer-column h3 {
-      margin-bottom: 20px;
-    }
+      .footer-column ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-    .footer-column ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+      .footer-column li {
+        margin-bottom: 10px;
+      }
 
-    .footer-column li {
-      margin-bottom: 10px;
-    }
+      .footer-column a {
+        color: white;
+        text-decoration: none;
+      }
 
-    .footer-column a {
-      color: white;
-      text-decoration: none;
-    }
+      .footer-bottom {
+        background-color: #111111;
+        text-align: center;
+        padding: 20px;
+      }
 
-    .footer-bottom {
-      background-color: #111111;
-      text-align: center;
-      padding: 20px;
-    }
+      .footer-bottom p {
+        margin: 0;
+      }
 
-    .footer-bottom p {
-      margin: 0;
-    }
+      .footer-bottom a {
+        color: white;
+        text-decoration: none;
+      }
 
-    .footer-bottom a {
-      color: white;
-      text-decoration: none;
-    }
+      .background {
+        background-image: url(bg.jpeg);
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-    .background {
-      background-image: url(bg.jpeg);
-      background-size: cover;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+      .background {
+        animation-name: move-background;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
 
-    .background {
-      animation-name: move-background;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
+      body {
+        font-family: Arial, sans-serif;
+        color: white;
+        font-size: 30px;
+        margin-right: 10px;
+        background-color: #111111;
+      }
 
-    body {
-      font-family: Arial, sans-serif;
-      color: white;
-      font-size: 30px;
-      margin-right: 10px;
-      background-color: #111111;
-    }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
 
-    h1 {
-      text-align: center;
-      margin-top: 50px;
-    }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+        margin-top: 50px;
+      }
 
-    table {
-      border-collapse: collapse;
-      margin: auto;
-      margin-top: 50px;
-    }
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid black;
+      }
 
-    th,
-    td {
-      padding: 10px;
-      text-align: center;
-      border: 1px solid black;
-    }
+      .timer {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
 
-    .timer {
-      text-align: center;
-      font-size: 30px;
-      margin-top: 50px;
-    }
-  </style>
-</head>
+  <body>
+    <!-- <div class="background"> -->
 
-<body>
-
-  <!-- <div class="background"> -->
-
-  <nav>
-    <div class="image-container">
-      <img align="left" src="musicsymbol.jpeg">
-    </div>
-    <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
-    <a href="about_page.html">About</a>
+    <nav>
+      <div class="image-container">
+        <img align="left" src="musicsymbol.jpeg" />
+      </div>
+      <div class="nav-text" style="font-size: 40px">Cadence</div>
+      <a href="about_page.html">About</a>
       <a href="/playlist">Playlist</a>
       <a href="new_spotlight.html" class="active">Spotlight</a>
       <a href="5_artitsts.html">Artists</a>
       <a href="search_page.html">Search</a>
       <a href="webpage.html">Home</a>
     </nav>
-  <div class="container">
-    <div class="artist-info">
-      <img src="arman malik.jpeg" alt="Artist Image">
-      <h1 id="typing-text">ARMAAN MALIK</h1>
-      <h2>Short Description of the Artist</h2>
-      <p>Armaan Malik is a popular Indian singer and songwriter who is known for his soulful and melodious voice. He
-        was born on July 22, 1995, in Mumbai, India, to a family with a musical background. Armaan started his career
-        in music as a playback singer in Bollywood films, and later went on to release several hit singles and albums.
-        He has won numerous awards for his work, including the Filmfare Award for Best Male Playback Singer in 2016,
-        and has also been a judge on several reality singing shows. Armaan is considered to be one of the most
-        talented and promising young artists in the Indian music industry today.</p>
-    </div>
-  </div>
-  <div>
-    <p style="text-align: center; align-self: center;">Rate this artist:</p>
-    <form style="text-align:center ;" id="rating-form">
-      <input type="radio" id="star5" name="rating" value="5">
-      <label for="star5">5 stars</label>
-      <input type="radio" id="star4" name="rating" value="4">
-      <label for="star4">4 stars</label>
-      <input type="radio" id="star3" name="rating" value="3">
-      <label for="star3">3 stars</label>
-      <input type="radio" id="star2" name="rating" value="2">
-      <label for="star2">2 stars</label>
-      <input type="radio" id="star1" name="rating" value="1">
-      <label for="star1">1 star</label>
-      <br>
-      
-      <p for="review">Write a review:</p>
-
-      <textarea style="font-size: 30px; width: 500px;height: 200px;" id="review" name="review"></textarea>
-      
-      <br>
-      
-      <p for="user-name">Your name:</p>
-      <input style="font-size: 30px; height: 30px;width:500px" type="text" id="user-name" name="user-name">
-      
-      <br>
-      <br><br>
-      <input style="font-size: 30px; width: auto; height: 50px;" type="button" value="Submit" onclick="addReview()">
-    </form>
-  </div>
-  <div>
-    <table id="reviews-table">
-      <thead>
-        <tr>
-          <th>Rating</th>
-          <th>Review</th>
-          <th>User</th>
-        </tr> 
-      </thead>
-      <tbody id="reviews-table-body">
-      </tbody>
-    </table>
-  </div>
-  <p style="text-align: center; margin: 20px;">Time to Next Album Launch: </p>
-  <div class="timer" id="countdown-timer" style="margin: 0px;"></div>
-  <br><br>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <ul>
-          <h3>FIND US ON</h3>
-          <li><a href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D">INSTAGRAM</a></li>
-          <li><a href="https://www.facebook.com/aniket.bansal.5011">FACEBOOK</a></li>
-          <li><a
-              href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">TWITTER</a>
-          </li>
-        </ul>
-        <p></p>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="webpage.html">Home</a></li>
-          <li><a href="5_artitsts.html">Artists</a></li>
-          <li><a href="about_page.html">About Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>Email: info@tunetrover.com</p>
-        <p>Phone: 2434294243</p>
-        <p>Address: Bakul Nivas , IIIT HYD</p>
+    <div class="container">
+      <div class="artist-info">
+        <img src="arman malik.jpeg" alt="Artist Image" />
+        <h1 id="typing-text">ARMAAN MALIK</h1>
+        <h2>Short Description of the Artist</h2>
+        <p>
+          Armaan Malik is a popular Indian singer and songwriter who is known
+          for his soulful and melodious voice. He was born on July 22, 1995, in
+          Mumbai, India, to a family with a musical background. Armaan started
+          his career in music as a playback singer in Bollywood films, and later
+          went on to release several hit singles and albums. He has won numerous
+          awards for his work, including the Filmfare Award for Best Male
+          Playback Singer in 2016, and has also been a judge on several reality
+          singing shows. Armaan is considered to be one of the most talented and
+          promising young artists in the Indian music industry today.
+        </p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2023 TuneTroverWebsite. All Rights Reserved.</p>
+    <div>
+      <p style="text-align: center; align-self: center">Rate this artist:</p>
+      <form style="text-align: center" id="rating-form">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5">5 stars</label>
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4">4 stars</label>
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3">3 stars</label>
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2">2 stars</label>
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1">1 star</label>
+        <br />
+
+        <p for="review">Write a review:</p>
+
+        <textarea
+          style="font-size: 30px; width: 500px; height: 200px"
+          id="review"
+          name="review"
+        ></textarea>
+
+        <br />
+
+        <p for="user-name">Your name:</p>
+        <input
+          style="font-size: 30px; height: 30px; width: 500px"
+          type="text"
+          id="user-name"
+          name="user-name"
+        />
+
+        <br />
+        <br /><br />
+        <input
+          style="font-size: 30px; width: auto; height: 50px"
+          type="button"
+          value="Submit"
+          onclick="addReview()"
+        />
+      </form>
     </div>
-  </footer>
+    <div>
+      <table id="reviews-table">
+        <thead>
+          <tr>
+            <th>Rating</th>
+            <th>Review</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        <tbody id="reviews-table-body"></tbody>
+      </table>
+    </div>
+    <p style="text-align: center; margin: 20px">Time to Next Album Launch:</p>
+    <div class="timer" id="countdown-timer" style="margin: 0px"></div>
+    <br /><br />
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <ul>
+            <h3>FIND US ON</h3>
+            <li>
+              <a
+                href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D"
+                >INSTAGRAM</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/aniket.bansal.5011">FACEBOOK</a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                >TWITTER</a
+              >
+            </li>
+          </ul>
+          <p></p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="webpage.html">Home</a></li>
+            <li><a href="5_artitsts.html">Artists</a></li>
+            <li><a href="about_page.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>Email: info@Cadence.com</p>
+          <p>Phone: 2434294243</p>
+          <p>Address: Bakul Nivas , IIIT HYD</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023 CadenceWebsite. All Rights Reserved.</p>
+      </div>
+    </footer>
 
-
-
-  <!-- </div> -->
-  <script>
-    // Animation
-    var img = document.getElementById("artist-image");
-    var zoomIn = true;
-    setInterval(function () {
-      if (zoomIn) {
-        img.style.width = "60%";
-      } else {
-        img.style.width = "50%";
-      }
-      zoomIn = !zoomIn;
-    }, 1000);
-    // Reviews
-    function addReview() {
-      // .value gives the number of stars and queryseletor selects from all the inputs with name rating and is checked(radio)
-      var rating = document.querySelector('input[name="rating"]:checked').value;
-      var review = document.getElementById("review").value;
-      var userName = document.getElementById("user-name").value;
-
-      if (rating && review && userName) {
-        var reviewObject = {
-          rating: rating,
-          review: review,
-          userName: userName
-        };
-
-        var reviewsTableBody = document.getElementById("reviews-table-body");
-        var row = reviewsTableBody.insertRow(-1);
-        
-        // take a new row and insert into columns
-        row.insertCell(0).innerHTML = rating;
-        row.insertCell(1).innerHTML = review;
-        row.insertCell(2).innerHTML = userName;
-        
-        // reset the form 
-
-        document.getElementById("rating-form").reset();
-
-      } 
-      else {
-        alert("Please fill in all fields.");
-      }
-    }
-
-    // Countdown timer
-    var countdownDate = new Date("August 30, 2024 00:00:00").getTime();
-    var countdownTimer = setInterval(function () {
-      var now = new Date().getTime();
-      var distance = countdownDate - now;
-      if (distance < 0) {
-        clearInterval(countdownTimer);
-        document.getElementById("countdown-timer").innerHTML = "ALBUM RELEASED!";
-      } else {
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-      }
-    }, 1000);
-
-    function typeEffect(element, speed) {
-      const text = element.textContent;
-      element.textContent = "";
-      let i = 0;
-      const timer = setInterval(function () {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
+    <!-- </div> -->
+    <script>
+      // Animation
+      var img = document.getElementById('artist-image')
+      var zoomIn = true
+      setInterval(function () {
+        if (zoomIn) {
+          img.style.width = '60%'
         } else {
-          clearInterval(timer);
+          img.style.width = '50%'
         }
-      }, speed);
-    }
-    const typingText = document.getElementById("typing-text");
-    typeEffect(typingText, 250); // type at 50 milliseconds per character
+        zoomIn = !zoomIn
+      }, 1000)
+      // Reviews
+      function addReview() {
+        // .value gives the number of stars and queryseletor selects from all the inputs with name rating and is checked(radio)
+        var rating = document.querySelector(
+          'input[name="rating"]:checked'
+        ).value
+        var review = document.getElementById('review').value
+        var userName = document.getElementById('user-name').value
 
-  </script>
-</body>
+        if (rating && review && userName) {
+          var reviewObject = {
+            rating: rating,
+            review: review,
+            userName: userName,
+          }
 
+          var reviewsTableBody = document.getElementById('reviews-table-body')
+          var row = reviewsTableBody.insertRow(-1)
+
+          // take a new row and insert into columns
+          row.insertCell(0).innerHTML = rating
+          row.insertCell(1).innerHTML = review
+          row.insertCell(2).innerHTML = userName
+
+          // reset the form
+
+          document.getElementById('rating-form').reset()
+        } else {
+          alert('Please fill in all fields.')
+        }
+      }
+
+      // Countdown timer
+      var countdownDate = new Date('August 30, 2024 00:00:00').getTime()
+      var countdownTimer = setInterval(function () {
+        var now = new Date().getTime()
+        var distance = countdownDate - now
+        if (distance < 0) {
+          clearInterval(countdownTimer)
+          document.getElementById('countdown-timer').innerHTML =
+            'ALBUM RELEASED!'
+        } else {
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+          var hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          )
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000)
+          document.getElementById('countdown-timer').innerHTML =
+            days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's '
+        }
+      }, 1000)
+
+      function typeEffect(element, speed) {
+        const text = element.textContent
+        element.textContent = ''
+        let i = 0
+        const timer = setInterval(function () {
+          if (i < text.length) {
+            element.textContent += text.charAt(i)
+            i++
+          } else {
+            clearInterval(timer)
+          }
+        }, speed)
+      }
+      const typingText = document.getElementById('typing-text')
+      typeEffect(typingText, 250) // type at 50 milliseconds per character
+    </script>
+  </body>
 </html>

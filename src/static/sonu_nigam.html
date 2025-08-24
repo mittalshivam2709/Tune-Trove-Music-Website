@@ -1,319 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .image-container img {
+        width: 100px;
+        height: 100px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-  .image-container img {
-    width: 100px;
-    height: 100px;
-}
+      img {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: 10px solid purple;
 
-img {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    border: 10px solid purple;
+        transition: transform 0.25s ease-in-out;
+      }
 
-    transition: transform 0.25s ease-in-out;
-}
+      img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 8px 32px 0 black;
+      }
 
-img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 8px 32px 0 black;
-}
+      nav {
+        background-color: black;
+        overflow: hidden;
+        padding: 10px;
+        margin-bottom: 0%;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 98%;
+        z-index: 1;
+        height: 100px;
+        color: #fff;
+        border-bottom: 5px solid white;
+      }
 
-nav {
-    background-color: black;
-    overflow: hidden;
-    padding: 10px;
-    margin-bottom: 0%;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 98%;
-    z-index: 1;
-    height: 100px;
-    color: #fff;
-    border-bottom: 5px solid white;
-}
+      nav a {
+        color: white;
 
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
 
-nav a {
-    color: white;
+        float: right;
+        flex-basis: 10%;
+      }
 
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-    float: right;
-    flex-basis: 10%;
+      .active {
+        background-color: #4caf50;
+        color: white;
+      }
 
-}
+      .nav-text {
+        font-size: 60px;
+        display: inline-block;
+        padding: 10px;
+      }
 
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+      body {
+        padding-top: 60px;
+        background-color: black;
+        color: white;
+        font-family: Tahoma, sans-serif;
+      }
 
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
 
-.nav-text {
-    font-size: 60px;
-    display: inline-block;
-    padding: 10px;
-}
+      .column {
+        display: flex;
+        max-width: 33%;
+        padding: 0 20px;
+        text-align: center;
+        transition: width 2s ease-in-out;
+      }
+      .background {
+        background-image: url(bg.jpeg);
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-body {
-    padding-top: 60px;
-    background-color: black;
-    color: white;
-    font-family: Tahoma, sans-serif;
+      .background {
+        animation-name: move-background;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
 
-}
+      @keyframes move-background {
+        from {
+          background-position: 0 0;
+        }
 
+        to {
+          background-position: 100% 0;
+        }
+      }
 
+      footer {
+        background-color: #212121;
+        color: white;
+        padding: 40px 0;
+        border-top: 5px solid white;
+      }
 
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-}
+      .footer-column {
+        width: 30%;
+      }
 
-.column {
-    display: flex;
-    max-width: 33%;
-    padding: 0 20px;
-    text-align: center;
-    transition: width 2s ease-in-out;
-}
-.background {
-    background-image: url(bg.jpeg);
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+      .footer-column h3 {
+        margin-bottom: 20px;
+      }
 
-.background {
-    animation-name: move-background;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+      .footer-column ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-@keyframes move-background {
-    from {
-        background-position: 0 0;
-    }
+      .footer-column li {
+        margin-bottom: 10px;
+      }
 
-    to {
-        background-position: 100% 0;
-    }
-}
+      .footer-column a {
+        color: white;
+        text-decoration: none;
+      }
 
-footer {
-    background-color: #212121;
-    color: white;
-    padding: 40px 0;
-    border-top: 5px solid white;
-}
+      .footer-bottom {
+        background-color: #111111;
+        text-align: center;
+        padding: 20px;
+      }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+      .footer-bottom p {
+        margin: 0;
+      }
 
-.footer-column {
-    width: 30%;
-}
+      .footer-bottom a {
+        color: white;
+        text-decoration: none;
+      }
 
-.footer-column h3 {
-    margin-bottom: 20px;
-}
+      .row1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
 
-.footer-column ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+      column:hover {
+        width: 600px;
+      }
 
-.footer-column li {
-    margin-bottom: 10px;
-}
+      .row2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
 
-.footer-column a {
-    color: white;
-    text-decoration: none;
-}
+      .row3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+      }
+      a {
+        color: white;
+      }
+    </style>
+  </head>
 
-.footer-bottom {
-    background-color: #111111;
-    text-align: center;
-    padding: 20px;
-}
+  <body>
+    <div class="background">
+      <nav>
+        <div class="image-container">
+          <img align="left" src="musicsymbol.jpeg" />
+        </div>
+        <div class="nav-text" style="font-size: 40px">Cadence</div>
+        <a href="search_page.html">Search</a>
+        <a href="new_spotlight.html">Spotlight</a>
 
-.footer-bottom p {
-    margin: 0;
-}
+        <a href="about_page.html">About</a>
+        <a href="5_artitsts.html">Artists</a>
+        <a href="webpage.html">Home</a>
+      </nav>
 
-.footer-bottom a {
-    color: white;
-    text-decoration: none;
-}
+      <center>
+        <h1 style="font-size: 80px">SONU NIGAM ALBUMS</h1>
+      </center>
+      <div class="row">
+        <div class="column">
+          <a href="sonu_Album1.html">
+            <img src="soni1.jpeg" alt="Artist 1" />
+            <h2>LOVE ANTHEMS</h2>
+            <h2>No of songs:5</h2>
+            <h2>Year of Release:2014</h2>
+          </a>
+        </div>
 
+        <div class="column">
+          <a href="sonu_album4.html">
+            <img src="soni4.jpg" alt="Artist 2" />
+            <h2>CELEBRATING SONU NIGAM</h2>
+            <h2>No of songs:5</h2>
+            <h2>Year of Release:2008</h2>
+          </a>
+        </div>
+        <div class="column">
+          <a href="sonu_album5.html">
+            <img src="soni5.jpg" alt="Artist 3" />
+            <h2>DEEWANA</h2>
+            <h2>No of songs:5</h2>
+            <h2>Year of Release:2009</h2>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="sonu_album2.html">
+            <img src="sini2.jpg" alt="Artist 4" />
+            <h2>JAAN</h2>
+            <h2>No of songs:5</h2>
+            <h2>Year of Release:2015</h2>
+          </a>
+        </div>
+        <div class="column">
+          <a href="sonu_album3.html">
+            <img src="soni3.jpeg" alt="Artist 5" />
+            <h2>CLASSICALLY MILD</h2>
+            <h2>No of songs:5</h2>
+            <h2>Year of Release:2010</h2>
+          </a>
+        </div>
+      </div>
 
-
-
-
-.row1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-}
-
-column:hover {
-    width: 600px;
-}
-
-.row2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-}
-
-.row3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-}
-a {
-    color: white;
-}
-
-</style>
-
-</head>
-
-<body>
-<div class="background">
-<nav>
-    <div class="image-container">
-        <img align="left" src="musicsymbol.jpeg">
-    </div>
-    <div class="nav-text" style="font-size: 40px;">TUNE TROVE</div>
-    <a href="search_page.html">Search</a>
-    <a href="new_spotlight.html">Spotlight</a>
-
-    <a href="about_page.html">About</a>
-    <a href="5_artitsts.html">Artists</a>
-    <a  href="webpage.html">Home</a>
-</nav>
-
-
-  <center>
-    <h1 style="font-size: 80px;">SONU NIGAM ALBUMS</h1>
-  </center>
-  <div class="row">
-    <div class="column">
-      <a href="sonu_Album1.html">
-        <img src="soni1.jpeg" alt="Artist 1">
-        <h2>LOVE ANTHEMS</h2>
-        <h2>No of songs:5</h2>
-        <h2>Year of Release:2014</h2>
-      </a>
-    </div>
-
-    <div class="column">
-      <a href="sonu_album4.html">
-        <img src="soni4.jpg" alt="Artist 2">
-        <h2>CELEBRATING SONU NIGAM</h2>
-        <h2>No of songs:5</h2>
-        <h2>Year of Release:2008</h2>
-      </a>
-    </div>
-    <div class="column">
-      <a href="sonu_album5.html">
-        <img src="soni5.jpg" alt="Artist 3">
-        <h2>DEEWANA</h2>
-        <h2>No of songs:5</h2>
-        <h2>Year of Release:2009</h2>
-      </a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <a href="sonu_album2.html">
-        <img src="sini2.jpg" alt="Artist 4">
-        <h2>JAAN</h2>
-        <h2>No of songs:5</h2>
-        <h2>Year of Release:2015</h2>
-      </a>
-    </div>
-    <div class="column">
-      <a href="sonu_album3.html">
-        <img src="soni3.jpeg" alt="Artist 5">
-        <h2>CLASSICALLY MILD</h2>
-        <h2>No of songs:5</h2>
-        <h2>Year of Release:2010</h2>
-      </a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-container">
-        <div class="footer-column">
+      <footer>
+        <div class="footer-container">
+          <div class="footer-column">
             <ul>
-                <h3>FIND US ON</h3>
-                <li><a href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D">INSTAGRAM</a></li>
-                <li><a href="https://www.facebook.com/aniket.bansal.5011">FACEBOOK</a></li>
-                <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">TWITTER</a></li>
+              <h3>FIND US ON</h3>
+              <li>
+                <a
+                  href="https://www.instagram.com/aniket.bansal.5011/?igshid=YmMyMTA2M2Y%3D"
+                  >INSTAGRAM</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/aniket.bansal.5011"
+                  >FACEBOOK</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                  >TWITTER</a
+                >
+              </li>
             </ul>
             <p></p>
-        </div>
-        <div class="footer-column">
+          </div>
+          <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="webpage.html">Home</a></li>
-                <li><a href="5_artitsts.html">Artists</a></li>
-                <li><a href="about_page.html">About Us</a></li>
+              <li><a href="webpage.html">Home</a></li>
+              <li><a href="5_artitsts.html">Artists</a></li>
+              <li><a href="about_page.html">About Us</a></li>
             </ul>
-        </div>
-        <div class="footer-column">
+          </div>
+          <div class="footer-column">
             <h3>Contact Us</h3>
-            <p>Email: info@tunetrover.com</p>
+            <p>Email: info@Cadence.com</p>
             <p>Phone: 2434294243</p>
             <p>Address: Bakul Nivas , IIIT HYD</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>© 2023 CadenceWebsite. All Rights Reserved.</p>
+        </div>
+      </footer>
     </div>
-    <div class="footer-bottom">
-        <p>© 2023 TuneTroverWebsite. All Rights Reserved.</p>
-    </div>
-</footer>
-</div>
-</body>
-
+  </body>
 </html>
